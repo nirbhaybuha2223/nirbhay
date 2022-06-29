@@ -7,7 +7,7 @@ class bank
 public:
     bank(int);
     void deposit(int);
-    void withdraw(int); 
+    void withdraw(int);
     int showbalance();
 };
 bank::bank(int amt)
@@ -33,7 +33,7 @@ int main()
     bank nirbhay(1000);
     do
     {
-        //cout << "\n Balance before " << nirbhay.showbalance();
+        // cout << "\n Balance before " << nirbhay.showbalance();
         cout << "\n Choose from Following \n1.Deposit \n2.Withdraw \n9.ShowBalance \n0.Exit \nOption:";
         cin >> o;
         if (o == 0)
