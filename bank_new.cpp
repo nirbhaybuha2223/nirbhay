@@ -30,10 +30,10 @@ int bank::showbalance()
 int main()
 {
     int o;
-    bank prince(1000);
+    bank nirbhay(1000);
     do
     {
-        //cout << "\n Balance before " << prince.showbalance();
+        //cout << "\n Balance before " << nirbhay.showbalance();
         cout << "\n Choose from Following \n1.Deposit \n2.Withdraw \n9.ShowBalance \n0.Exit \nOption:";
         cin >> o;
         if (o == 0)
@@ -46,18 +46,18 @@ int main()
             int n;
             cout << "\n Enter the amount of deposit :";
             cin >> n;
-            prince.deposit(n);
-            cout << "\n Balance revised " << prince.showbalance();
+            nirbhay.deposit(n);
+            cout << "\n Balance revised " << nirbhay.showbalance();
             break;
         case 2:
             int n2;
             cout << "\n Enter the amount of withdraw :";
             cin >> n2;
-            prince.withdraw(n2);
-            cout << "\n Balance revised " << prince.showbalance();
+            nirbhay.withdraw(n2);
+            cout << "\n Balance revised " << nirbhay.showbalance();
             break;
         case 9:
-            cout << "\n Your Current Balance is " << prince.showbalance();
+            cout << "\n Your Current Balance is " << nirbhay.showbalance();
             break;
         }
     } while (o <= 50);
