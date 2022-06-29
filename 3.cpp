@@ -1,12 +1,24 @@
-#include<iostream>
+#include <iostream>
+using namespace std;
+class home
+{
+private:
+    int m;
+
+public:
+    int n = 10;
+    void set(int a)
+    {
+        m = a;
+    }
+    int get()
+    {
+        return m;
+    }
+};
 int main()
 {
-    float phy=65,chem=80,maths=77,per,total;
-    std::cout<<"phy:"<<phy;
-    std::cout<<"\n chem:"<<chem;
-    std::cout<<"\n maths:"<<maths;
-    total=phy+chem+maths;
-    std::cout<<"\ntotal:"<<total;
-    per = phy+chem+maths/3;
-    std::cout<<"\n per:"<<per;
+    home h1;
+    h1.set(100);
+    cout << h1.get();
 }

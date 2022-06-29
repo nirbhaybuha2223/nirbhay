@@ -8,7 +8,7 @@ public:
     void getdata()
     {
         char a;
-        cout << "Enter the option from the following : \na-Withdraw\nb-Deposit\nc-ShowBalance \n Option : ";
+        cout << "Enter the option from the following : \na-Withdraw\nb-Deposit \n Option : ";
         cin >> a;
         if (a == 'a')
         {
@@ -18,13 +18,13 @@ public:
         {
             deposit();
         }
-           else if (a == 'c')
-           {
-               display();
-           }
+        //        else if (a == 'c')
+        //        {
+        //            display();
+        //        }
         else
         {
-            cout << "Invalid response!!";
+            cout << "Invalid response!!\n";
             return getdata();
         }
     }
@@ -52,7 +52,8 @@ public:
     }
     void display()
     {
-        cout << "\n  total ammount in your bank is :" << b;
+        cout << "\ntotal ammount in your bank is : " << b;
+        return getdata();
     }
 };
 
@@ -61,4 +62,5 @@ int main()
     bank b;
     b.getdata();
     b.display();
+//    return getdata();
 }
