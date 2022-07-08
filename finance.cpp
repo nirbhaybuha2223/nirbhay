@@ -3,50 +3,74 @@
 using namespace std;
 class emi
 {
-    float e,p,r,t,i,Q;
+    float emi,p,r,n,T,i,a,x,m,z,h;
     public:
-    void gdata();
-    float cemi();
-    float emipay();
-    float emitotal();
+    void getdata();
+    void printdata();
+    float calcdata();
+    float calcdata1();
+    float calcdata2();
+    float cadata1(); 
 };
-void emi::gdata()
+void emi::getdata()
 {
-    cout<<"\n Enter the loan amount.. ";
-    cin>>p;
-    cout<<"\n Enter the rate.. ";
+    
+    cout<<"\n Enter loan amount:";    
+    cin>>p;                            
+    cout<<"\n Enter rate of interest:";  
     cin>>r;
-    cout<<"\n Enter the time.. ";
-    cin>>t;
+    cout<<"\n Enter time period in month:";   
+    cin>>n;
 }
-float emi::cemi()
+void emi::printdata() 
 {
-    r=r/(12*100);
-    t=t*12;
-    e=(p*r*pow(1+r,t)/(pow(1+r,t)-1));
-    return e;
+    cout<<"\n\n\n           month"<<"           interest"<<"           emi-interest"<<"            balance";
 }
-float emi::emipay()
+float emi::calcdata()
 {
-    i=e*12-p;
+    r=r/(12*100);     
+            
+    emi=(p*r*pow(1+r,n)/(pow(1+r,n)-1));   
+    return emi;
+}
+float emi::calcdata1()
+{
+    
+    i=emi*n-p;     
     return i;
 }
-float emi::emitotal()
+float emi::calcdata2()
 {
-    Q=p+i;
-    return Q;
+    T=p+i;          
+    T=p+i;          
+    return T;
 }
+
+float emi::cadata1()    
+{
+    for(int h=1;h<=n;h++)    
+    {
+    m=p*r;
+    z=emi-m;
+    a=p-(z);   
+    cout<<"\n\n           "<<h<<"                "<<m<<"              "<<z<<"               "<<a;  
+    p=a;
+    }                            
+
+}
+
 int main()
 {
-    emi a;
-    float e,i,Q;
-    a.gdata();
-    e=a.cemi();
-    cout<<"The monthly emi .. "<<e;
-    i=a.emipay();
-    cout<<"\n pay ble amount .. "<<i;
-    Q=a.emitotal();
-    cout<<"\n Total pay .. "<<Q;
-
+    emi a1;
+    float emi,T,i;
+    a1.getdata();
+    emi=a1.calcdata();
+    cout<<"\n\n monthly EMI :"<<emi;
+    i=a1.calcdata1();
+    cout<<"\n\n payable interest :"<<i;
+    T=a1.calcdata2();
+    cout<<"\n\n Total payment :"<<T;
+    a1.printdata();
+    a1.cadata1();
+    return 0;
 }
-
