@@ -40,7 +40,7 @@ int main()
     int dep,wd,total,n;
     bank me1(1000);
     bank me2(me1);
-    cout<<"\n balance : "<<me1.showbalance();
+--*    cout<<"\n balance : "<<me1.showbalance();
     cout<<"\n balance : "<<me2.showbalance();
    do{
         cout<<"\n Enter 1 for Deposite ";
@@ -75,7 +75,3 @@ int main()
     n++;
     }while(n<=10);
 }
-
-
-
-

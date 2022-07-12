@@ -21,7 +21,7 @@ class exp
         return e_temp;
     }
 };
-int main()0
+int main()
 {
     exp e1,e2,e3;
     e1.set_ab(10,20);
